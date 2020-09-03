@@ -3,33 +3,33 @@
 @section('main_content')
   <div>
 
-    <h1>Crea un Movie</h1>
+    <h1>Modifica un Movie</h1>
 
-    <form action="{{ route('movies.store') }}" method="post">
+    <form action="{{ route('movies.update', $movie->id) }}" method="post">
       @csrf
-      @method('POST')
+      @method('PUT')
 
       <label for="title">Titolo</label>
       <br>
-      <input type="text" name="title" value="{{ old('title') }}" placeholder="Inserisci titolo movie">
+      <input type="text" name="title" value="{{ $movie->title }}" placeholder="Inserisci titolo movie">
       <br><br>
 
       <label for="year">Anno</label>
       <br>
-      <input type="text" name="year" value="{{ old('year') }}" placeholder="Inserisci anno pubblicazione">
+      <input type="text" name="year" value="{{ $movie->year }}" placeholder="Inserisci anno pubblicazione">
       <br><br>
 
       <label for="rating">Rating</label>
       <br>
-      <input type="text" name="rating" value="{{ old('rating') }}" placeholder="Inserisci un voto">
+      <input type="text" name="rating" value="{{ $movie->rating }}" placeholder="Inserisci un voto">
       <br><br>
 
       <label for="description">Descrizione</label>
       <br>
-      <textarea name="description" rows="8" cols="80" value="{{ old('description') }}" placeholder="Inserisci una descrizione"></textarea>
+      <textarea name="description" rows="8" cols="80" placeholder="Inserisci una descrizione">{{ $movie->description }}</textarea>
       <br><br>
 
-      <input type="submit" value="Aggiungi movie">
+      <input type="submit" value="Modifica movie">
     </form>
   </div>
 
