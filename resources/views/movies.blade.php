@@ -1,24 +1,17 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Lista Movies</title>
-  </head>
-  <body>
+@extends('layouts.app')
+
+@section('main_content')
+  <div>
+    <h1>LISTA MOVIES</h1>
 
     <div>
-      <h1>LISTA MOVIES</h1>
+      @foreach ($movies as $movie)
+        <h2><a href="{{ route('movies.show', $movie->id) }}">{{ $movie->title }}</a></h2>
+        <p>Anno: {{ $movie->year }}</p>
+        <p>Rating: {{ $movie->rating }}</p>
+        <p>Descrizione: {{ $movie->description }}</p>
 
-      <div>
-        @foreach ($movies as $movie)
-          <h2>Titolo: {{ $movie->title }}</h2>
-          <p>Anno: {{ $movie->year }}</p>
-          <p>Rating: {{ $movie->rating }}</p>
-          <p>Descrizione: {{ $movie->description }}</p>
-
-        @endforeach
-      </div>
+      @endforeach
     </div>
-
-  </body>
-</html>
+  </div>
+@endsection
