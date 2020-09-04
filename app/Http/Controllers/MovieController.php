@@ -47,11 +47,14 @@ class MovieController extends Controller
         $request_data = $request->all();
 
         $new_movie = new Movie;
-        $new_movie->title = $request_data['title'];
-        $new_movie->description = $request_data['description'];
-        $new_movie->year = $request_data['year'];
-        $new_movie->rating = $request_data['rating'];
+        // $new_movie->title = $request_data['title'];
+        // $new_movie->description = $request_data['description'];
+        // $new_movie->year = $request_data['year'];
+        // $new_movie->rating = $request_data['rating'];
+
+        // se la nomenclatura è corretta è possibile usare questa scorciatoia
         $new_movie->fill($request_data);
+
         $saved = $new_movie->save();
 
         if ($saved) {
@@ -99,9 +102,11 @@ class MovieController extends Controller
       ]);
 
       $request_data = $request->all();
-      $movie->update($request_data);
+      $updated = $movie->update($request_data);
 
-      return redirect()->route('movies.show', $movie);
+      if ($updated) {
+        return redirect()->route('movies.show', $movie);
+      }
     }
 
     /**

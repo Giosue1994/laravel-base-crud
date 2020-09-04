@@ -14,6 +14,11 @@
       <input type="text" name="title" value="{{ old('title') }}" placeholder="Inserisci titolo movie">
       <br><br>
 
+      <label for="cover">Cover</label>
+      <br>
+      <input type="text" name="cover" value="img/{{ old('cover') }}" placeholder="Inserisci immagine">
+      <br><br>
+
       <label for="year">Anno</label>
       <br>
       <input type="text" name="year" value="{{ old('year') }}" placeholder="Inserisci anno pubblicazione">
