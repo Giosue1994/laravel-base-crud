@@ -3,7 +3,7 @@
 @section('main_content')
   <div>
 
-    <h1>Crea un Movie</h1>
+    <h1>Crea Movie</h1>
 
     <form action="{{ route('movies.store') }}" method="post">
       @csrf

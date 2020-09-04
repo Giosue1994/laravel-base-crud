@@ -3,7 +3,7 @@
 @section('main_content')
   <div>
 
-    <h1>Modifica un Movie</h1>
+    <h1>Modifica Movie</h1>
 
     <form action="{{ route('movies.update', $movie->id) }}" method="post">
       @csrf
