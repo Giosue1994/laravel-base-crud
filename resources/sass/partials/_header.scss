@@ -1,4 +1,27 @@
 // HEADER
 header {
-  
+
+  nav {
+    z-index: 123445;
+    background-color: #0f0f18;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+
+    .container {
+      @include vertical_center;
+      justify-content: space-between;
+      width: 100%;
+
+      .logo {
+        img {
+          width: 200px;
+        }
+      }
+
+      .menu {
+
+      }
+    }
+  }
 }

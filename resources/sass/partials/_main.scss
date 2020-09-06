@@ -1,6 +1,67 @@
 
 // MAIN
 main {
+  padding-top: 70px;
+
+  #movies {
+
+    .list-movies {
+      @include space_between;
+      flex-wrap: wrap;
+
+      .box-movie {
+        position: relative;
+        @include vertical_center;
+        flex-direction: column;
+        flex-basis: 250px;
+        text-align: center;
+        padding: 37px;
+        height: 250px;
+        border-radius: 100%;
+        border: 2px solid red;
+        overflow: hidden;
+        transition: 0.2s ease;
+
+        h2 {
+          @include vertical_center;
+        }
+
+        .box-img {
+          overflow: hidden;
+
+          img {
+            width: 300px;
+          }
+        }
+
+        .box-edit {
+          @include vertical_center;
+          transition: .5s ease;
+
+          button,
+          form {
+            padding: 5px;
+          }
+        }
+
+        &:hover h2 {
+          display: none;
+        }
+
+        &:hover .box-edit {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+          padding: 0;
+        }
+      }
+    }
+  }
+
   #show {
     img {
       border: 3px solid black;

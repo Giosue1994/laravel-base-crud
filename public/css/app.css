@@ -1,13 +1,137 @@
 /* ________ RESET ________ */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ________ REGOLE GENERALI ________ */
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #0f0f18;
+  color: white;
 }
 
-img {
+.container {
+  padding: 0 30px;
+}
+
+button,
+.btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  text-shadow: 1px 1px black;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+button a,
+.btn a {
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #005306;
+}
+
+.delete {
+  background-color: red;
+}
+
+.delete:hover {
+  background-color: #940000;
+}
+
+header nav {
+  z-index: 123445;
+  background-color: #0f0f18;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+}
+
+header nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+header nav .container .logo img {
   width: 200px;
+}
+
+main {
+  padding-top: 70px;
+}
+
+main #movies .list-movies {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+main #movies .list-movies .box-movie {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 250px;
+  text-align: center;
+  padding: 37px;
+  height: 250px;
+  border-radius: 100%;
+  border: 2px solid red;
+  overflow: hidden;
+  transition: 0.2s ease;
+}
+
+main #movies .list-movies .box-movie h2 {
+  display: flex;
+  align-items: center;
+}
+
+main #movies .list-movies .box-movie .box-img {
+  overflow: hidden;
+}
+
+main #movies .list-movies .box-movie .box-img img {
+  width: 300px;
+}
+
+main #movies .list-movies .box-movie .box-edit {
+  display: flex;
+  align-items: center;
+  transition: 0.5s ease;
+}
+
+main #movies .list-movies .box-movie .box-edit button,
+main #movies .list-movies .box-movie .box-edit form {
+  padding: 5px;
+}
+
+main #movies .list-movies .box-movie:hover h2 {
+  display: none;
+}
+
+main #movies .list-movies .box-movie:hover .box-edit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main #movies .list-movies .box-movie:hover {
+  padding: 0;
 }
 
 main #show img {

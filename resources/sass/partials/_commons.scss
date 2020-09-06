@@ -1,15 +1,48 @@
 /* ________ RESET ________ */
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* ________ REGOLE GENERALI ________ */
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #0f0f18;
+  color: $primary_color;
 }
 
-img {
-  width: 200px;
+.container {
+  padding: 0 30px;
+}
+
+button,
+.btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: green;
+  color: $primary_color;
+  text-shadow: 1px 1px black;
+  padding: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .5s ease;
+
+  a {
+    text-decoration: none;
+    color: $primary_color;
+    text-shadow: 1px 1px black;
+  }
+
+  &:hover {
+    background-color: #005306;
+  }
+}
+
+.delete {
+  background-color: red;
+
+  &:hover {
+    background-color: #940000;
+  }
 }

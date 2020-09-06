@@ -11,7 +11,7 @@
   <body>
 
     <header>
-      {{-- @include('pages.partials.header') --}}
+      @include('partials.header')
     </header>
 
     <main>
@@ -19,7 +19,7 @@
     </main>
 
     <footer>
-      {{-- @include('pages.partials.footer') --}}
+      @include('partials.footer')
     </footer>
 
     <script src="{{ asset('js/app.js') }}"></script>
